@@ -108,7 +108,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                 controller: _tabController,            // 1) links it to the pages
                 selectedColor: const Color(0xFF1B3A6B), // 2) active dot color
                 color: Colors.grey.shade300,           // 3) inactive dot color
-                indicatorSize: 30,                     // diameter of each dot
+                indicatorSize: 14,                     // diameter of each dot
               ),
             ),
 
@@ -127,6 +127,37 @@ class _OnboardingScreenState extends State<OnboardingScreen>
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// A single onboarding page's visual content.
+class _PageView extends StatelessWidget {
+  const _PageView({required this.page});
+  final _Page page;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(32),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(page.icon, size: 120, color: page.color),
+          const SizedBox(height: 40),
+          Text(
+            page.title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            page.body,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
+          ),
+        ],
       ),
     );
   }

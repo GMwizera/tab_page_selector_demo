@@ -6,7 +6,7 @@ This tiny Flutter app showcases a real-world use case for `TabPageSelector`: a 3
 
 ## Screenshot
 
-![FarmWise onboarding screen showing the TabPageSelector dots](screenshots/app.png)
+![FarmWise onboarding screen showing the TabPageSelector dots](screenshots/tabPageSelector.png)
 
 ## How to run
 
@@ -15,7 +15,7 @@ This tiny Flutter app showcases a real-world use case for `TabPageSelector`: a 3
 flutter pub get
 
 # 2. Run on Chrome (or any connected device/emulator)
-flutter run -d chrome
+flutter run -d chrome (For chrome)
 ```
 
 Then swipe left/right between the pages, or tap **Next** — watch the dots update.
@@ -32,9 +32,6 @@ All three live on the `TabPageSelector` widget in [`lib/main.dart`](lib/main.dar
 
 > Bonus attribute: `indicatorSize` — the diameter of each dot in logical pixels (set to `14` here).
 
-## Key idea
-
-`TabPageSelector` is a **read-only indicator** — the dots are not tappable by default. Navigation happens by swiping the `TabBarView` or by moving the `TabController` programmatically (e.g. the **Next** button). The dots simply listen to the controller and redraw.
 
 ## Tech
 
