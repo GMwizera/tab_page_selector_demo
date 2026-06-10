@@ -32,8 +32,3 @@ All three live on the `TabPageSelector` widget in [`lib/main.dart`](lib/main.dar
 
 > Bonus attribute: `indicatorSize` — the diameter of each dot in logical pixels (set to `14` here).
 
-
-## Tech
-
-- Flutter (Dart SDK 3.7.2)
-- `TabController` + `TabBarView` + `TabPageSelector`

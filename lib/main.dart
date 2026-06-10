@@ -108,7 +108,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                 controller: _tabController,            // 1) links it to the pages
                 selectedColor: const Color(0xFF1B3A6B), // 2) active dot color
                 color: Colors.grey.shade300,           // 3) inactive dot color
-                indicatorSize: 14,                     // diameter of each dot
+                indicatorSize: 16,                     // diameter of each dot
               ),
             ),
 
